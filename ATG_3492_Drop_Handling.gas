@@ -1,0 +1,994 @@
+Program.Sub.ScreenSU.Start
+gui.F_Length..create
+gui.F_Length..caption("Length")
+gui.F_Length..size(6030,3105)
+gui.F_Length..position(0,0)
+gui.F_Length..event(unload,f_length_unload)
+gui.F_Length..alwaysontop(False)
+gui.F_Length..fontname("Arial")
+gui.F_Length..fontsize(8)
+gui.F_Length..forecolor(0)
+gui.F_Length..fontstyle(,,,,)
+gui.F_Length..BackColor(-2147483633)
+gui.F_Length..controlbox(True)
+gui.F_Length..maxbutton(False)
+gui.F_Length..minbutton(True)
+gui.F_Length..mousepointer(0)
+gui.F_Length..moveable(True)
+gui.F_Length..sizeable(False)
+gui.F_Length..ShowInTaskBar(True)
+gui.F_Length..titlebar(True)
+gui.F_Length.lbl1.create(label,"Enter length of pipe used:",True,3555,330,1,100,100,True,0,Arial,12,-2147483633,0)
+gui.F_Length.txtFeet.create(textbox,"0",True,1200,500,0,100,1100,True,0,Arial,12,-2147483643,1)
+gui.F_Length.txtFeet.numericonly(2)
+gui.F_Length.txtFeet.event(gotfocus,txtfeet_gotfocus)
+gui.F_Length.txtInches.create(textbox,"0",True,1200,500,0,2500,1100,True,0,Arial,12,-2147483643,1)
+gui.F_Length.txtInches.numericonly(2)
+gui.F_Length.txtInches.event(gotfocus,txtinches_gotfocus)
+gui.F_Length.cmdOK.create(button)
+gui.F_Length.cmdOK.caption("OK")
+gui.F_Length.cmdOK.visible(True)
+gui.F_Length.cmdOK.size(1500,600)
+gui.F_Length.cmdOK.zorder(0)
+gui.F_Length.cmdOK.position(100,1800)
+gui.F_Length.cmdOK.enabled(True)
+gui.F_Length.cmdOK.fontname("Arial")
+gui.F_Length.cmdOK.fontsize(12)
+gui.F_Length.cmdOK.event(click,cmdok_click)
+gui.F_Length.lblLengths.create(label,"Label",True,5280,615,1,100,400,True,0,Arial,12,-2147483633,0)
+gui.F_Length.cmdFtKey.create(button)
+gui.F_Length.cmdFtKey.caption("Feet")
+gui.F_Length.cmdFtKey.visible(True)
+gui.F_Length.cmdFtKey.size(1000,500)
+gui.F_Length.cmdFtKey.zorder(0)
+gui.F_Length.cmdFtKey.position(1300,1100)
+gui.F_Length.cmdFtKey.enabled(True)
+gui.F_Length.cmdFtKey.fontname("Arial")
+gui.F_Length.cmdFtKey.fontsize(12)
+gui.F_Length.cmdFtKey.event(click,cmdftkey_click)
+gui.F_Length.cmdInKey.create(button)
+gui.F_Length.cmdInKey.caption("Inches")
+gui.F_Length.cmdInKey.visible(True)
+gui.F_Length.cmdInKey.size(1000,500)
+gui.F_Length.cmdInKey.zorder(0)
+gui.F_Length.cmdInKey.position(3700,1100)
+gui.F_Length.cmdInKey.enabled(True)
+gui.F_Length.cmdInKey.fontname("Arial")
+gui.F_Length.cmdInKey.fontsize(12)
+gui.F_Length.cmdInKey.event(click,cmdinkey_click)
+
+
+gui.F_Saw..create
+gui.F_Saw..caption("SAW")
+gui.F_Saw..size(5565,1710)
+gui.F_Saw..position(0,0)
+gui.F_Saw..event(unload,f_saw_unload)
+gui.F_Saw..alwaysontop(False)
+gui.F_Saw..fontname("Arial")
+gui.F_Saw..fontsize(8)
+gui.F_Saw..forecolor(0)
+gui.F_Saw..fontstyle(,,,,)
+gui.F_Saw..BackColor(-2147483633)
+gui.F_Saw..controlbox(True)
+gui.F_Saw..maxbutton(False)
+gui.F_Saw..minbutton(True)
+gui.F_Saw..mousepointer(0)
+gui.F_Saw..moveable(True)
+gui.F_Saw..sizeable(False)
+gui.F_Saw..ShowInTaskBar(True)
+gui.F_Saw..titlebar(True)
+gui.F_Saw.cmdSAW1.create(button)
+gui.F_Saw.cmdSAW1.caption("SAW1")
+gui.F_Saw.cmdSAW1.visible(True)
+gui.F_Saw.cmdSAW1.size(1500,800)
+gui.F_Saw.cmdSAW1.zorder(0)
+gui.F_Saw.cmdSAW1.position(200,200)
+gui.F_Saw.cmdSAW1.enabled(True)
+gui.F_Saw.cmdSAW1.fontname("Arial")
+gui.F_Saw.cmdSAW1.fontsize(12)
+gui.F_Saw.cmdSAW1.event(click,cmdsaw1_click)
+gui.F_Saw.cmdSAW2.create(button)
+gui.F_Saw.cmdSAW2.caption("SAW2")
+gui.F_Saw.cmdSAW2.visible(True)
+gui.F_Saw.cmdSAW2.size(1500,800)
+gui.F_Saw.cmdSAW2.zorder(0)
+gui.F_Saw.cmdSAW2.position(1900,200)
+gui.F_Saw.cmdSAW2.enabled(True)
+gui.F_Saw.cmdSAW2.fontname("Arial")
+gui.F_Saw.cmdSAW2.fontsize(12)
+gui.F_Saw.cmdSAW2.event(click,cmdsaw2_click)
+gui.F_Saw.cmdSAW3.create(button)
+gui.F_Saw.cmdSAW3.caption("SAW3")
+gui.F_Saw.cmdSAW3.visible(True)
+gui.F_Saw.cmdSAW3.size(1500,800)
+gui.F_Saw.cmdSAW3.zorder(0)
+gui.F_Saw.cmdSAW3.position(3600,200)
+gui.F_Saw.cmdSAW3.enabled(True)
+gui.F_Saw.cmdSAW3.fontname("Arial")
+gui.F_Saw.cmdSAW3.fontsize(12)
+gui.F_Saw.cmdSAW3.event(click,cmdsaw3_click)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.UDT.WO_Part.Define("WO",String)
+Variable.UDT.WO_Part.Define("Suffix",String)
+Variable.UDT.WO_Part.Define("Part",String)
+Variable.UDT.WO_Part.Define("Loc",String)
+Variable.UDT.WO_Part.Define("Diameter",Float)
+Variable.uGlobal.uWO_Part.Declare("WO_Part")
+Variable.Global.sBin.Declare(String)
+Variable.Global.fLength.Declare(Float,0)
+Program.External.Include.Library("BinToBin.lib")
+Variable.UDT.CutPart.Define("Part",String)
+Variable.UDT.CutPart.Define("Loc",String)
+Variable.UDT.CutPart.Define("Bin",String)
+Variable.UDT.CutPart.Define("Length",Float)
+Variable.UDT.CutPart.Define("WO",String)
+Variable.UDT.CutPart.Define("Seq",String)
+Variable.UDT.CutPart.Define("Line",String)
+Variable.UDT.CutPart.Define("qtyIssued",Float)
+Variable.uGlobal.uCutPart.Declare("CutPart")
+Variable.Global.sFile.Declare(String)
+Variable.Global.sLog.Declare(String)
+Variable.Global.fFeet.Declare(Float,0.0)
+Variable.Global.sPartBinFile.Declare(String)
+Variable.Global.sSaw.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'SMC for C&B Piping
+'7/2/2010
+'Hooks: 28876, 28879, 28877, 28878, 28882
+'10/22/2010:  28892 (Pre-Entry hook), 28891 (Seq Change) instead of 28876 (Seq Browser), 28875 (Populate Hook)
+
+F.Intrinsic.Control.CallSub("DL","sText",V.Ambient.NewLine)
+F.Intrinsic.Control.CallSub("DL","sText",V.Ambient.NewLine)
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,28892)
+	'If sequence 100, bypass JBS0075A screen, and go straight to JBS0075D screen
+	F.Intrinsic.Control.CallSub(Hook_pre_entry)
+F.Intrinsic.Control.EndIf
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,28879)
+	'Pre-Save hook:  Adds qty to apply to part/bin info from part browser
+	F.Intrinsic.Control.CallSub(Hook_pre_save_seq)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,28875)
+	'Populate hook: Delete all textfiles needed for program to refresh, and populate sequence field
+	F.Intrinsic.Control.CallSub(Hook_populate)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.Caller.Hook,<>,0)
+		F.Intrinsic.Control.If(V.Passed.000110,<>,"000100")
+			F.Intrinsic.Control.If(V.Caller.Hook,<>,28882)
+				F.Intrinsic.Control.End
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.ODBC.connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,28891)
+	'Sequence Change Hook - Populate Qty to Apply field with "serial qty"= total quantity/WO quantity
+	F.Intrinsic.Control.CallSub(Hook_seq_change)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Caller.Hook,=,28877)
+	'Select part/bin from custom browser and save selection info in new textfile
+	F.Intrinsic.Control.CallSub(Hook_select_part)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,28878)
+	'Select part/bin from custom browser and save selection info in new textfile
+	F.Intrinsic.Control.CallSub(Hook_select_part)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,28882)
+	'Pre- OK hook- read file, get length, ask if used again, and transfer inventory
+	F.Intrinsic.Control.CallSub(Hook_pre_okay)
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,=,0)
+	F.Intrinsic.Control.CallSub(Hook_pre_okay)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub(Unload)
+F.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.Main.End
+
+Program.Sub.Part_Browser.Start
+V.Local.sCol.Declare(String)
+V.Local.sColW.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sRow.Declare(String)
+V.Local.sParts.Declare(String)
+V.Local.sParts.Redim(-1,-1)
+V.Local.iUB.Declare(Long,-1)
+V.Local.iC.Declare(Long)
+V.Local.iTemp.Declare(Long)
+V.Local.sPartString.Declare(String)
+V.Local.sAlign.Declare(String)
+V.Local.sFormat.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sPartBin.Declare(String)
+V.Local.sHold.Declare(String)
+V.Local.iMinLength.Declare(String)
+V.Local.bAddRecord.Declare(Boolean)
+V.Local.iLen.Declare(Long)
+
+F.Intrinsic.String.Split("Part No*!*Loc*!*Description*!*Bin*!*Lot Bin QTY*!*Diameter","*!*",V.Local.sCol)
+F.Intrinsic.String.Split("2500*!*800*!*3000*!*1200*!*1000*!*1000","*!*",V.Local.sColW)
+F.Intrinsic.String.Split("0*!*0*!*0*!*0*!*0*!*0","*!*",V.Local.sAlign)
+F.Intrinsic.String.Split("*!**!**!**!**!*","*!*",V.Local.sFormat)
+F.Intrinsic.String.Concat("SELECT I.PART, I.LOCATION, I.DESCRIPTION, B.BIN, B.QUANTITY, W.WIDTH FROM V_INVENTORY_MSTR I, V_INVENTORY_MST2 W, V_ITEM_MASTER B WHERE B.PART=I.PART AND B.LOCATION=I.LOCATION AND W.PART=I.PART AND W.LOCATION=I.LOCATION AND W.WIDTH='",V.uGlobal.uWO_Part!Diameter,"' ORDER BY I.PART ASC",V.Local.sQuery)
+
+V.Local.iMinLength.Set(V.Passed.000120)
+
+'F.Intrinsic.UI.Browser("Select a part","conx",V.Local.sQuery,V.Local.sCol,V.Local.sColW,10500,5000,V.Local.sRet)
+
+F.Intrinsic.UI.ChangeWaitStatus("Building Browser")
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+F.Intrinsic.String.Concat("SELECT I.PART, I.LOCATION, I.DESCRIPTION, B.BIN, B.QUANTITY, W.WIDTH FROM V_INVENTORY_MSTR I, V_INVENTORY_MST2 W, V_ITEM_MASTER B WHERE B.PART=I.PART AND B.LOCATION=I.LOCATION AND W.PART=I.PART AND W.LOCATION=I.LOCATION AND (CODE_SOURCE='P' OR CODE_SOURCE='J') AND B.QUANTITY<>0 AND W.WIDTH='",V.uGlobal.uWO_Part!Diameter,"' ORDER BY B.BIN ASC,W.PART ASC,W.LOCATION ASC",V.Local.sQuery)
+'F.Intrinsic.UI.Msgbox(V.Local.sQuery)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstBins",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conx!rstBins.EOF,<>,True)
+
+	F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstBins.EOF,=,True)
+		V.Local.bAddRecord.Set(True)
+		F.Intrinsic.Debug.Stop
+		F.Intrinsic.Control.If(V.Local.iMinLength,>,0)
+			F.Intrinsic.String.Left(V.ODBC.conx!rstBins.FieldValTrim!BIN,2,V.Local.sHold)
+			F.Intrinsic.Control.If(V.Local.sHold.UCase,=,"BY")
+				F.Intrinsic.Debug.Stop
+				F.Intrinsic.String.Len(V.ODBC.conx!rstBins.FieldValTrim!BIN,V.Local.iLen)
+				F.Intrinsic.Math.Sub(V.Local.iLen,2,V.Local.iLen)
+				F.Intrinsic.String.Right(V.ODBC.conx!rstBins.FieldValTrim!BIN,V.Local.iLen,V.Local.sHold)
+				F.Intrinsic.Control.If(V.Local.sHold.IsNumeric,=,True)
+					F.Intrinsic.Control.If(V.Local.sHold.Long,<,V.Local.iMinLength)
+						V.Local.bAddRecord.Set(False)
+					F.Intrinsic.Control.ElseIf(V.ODBC.conx!rstBins.FieldValTrim!QUANTITY,<,V.Local.sHold.Long)
+						V.Local.bAddRecord.Set(False)
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.If(V.ODBC.conx!rstBins.FieldValTrim!QUANTITY,<,V.Local.iMinLength)
+				V.Local.bAddRecord.Set(False)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.If(V.Local.bAddRecord,=,True)
+			F.Intrinsic.String.Concat(V.ODBC.conx!rstBins.FieldValTrim!PART,"*!*",V.ODBC.conx!rstBins.FieldValTrim!LOCATION,"*!*",V.ODBC.conx!rstBins.FieldValTrim!DESCRIPTION,"*!*",V.ODBC.conx!rstBins.FieldValTrim!BIN,"*!*",V.ODBC.conx!rstBins.FieldValTrim!QUANTITY,"*!*",V.ODBC.conx!rstBins.FieldValTrim!WIDTH,V.Local.sRow)
+
+			F.Intrinsic.Math.Add(V.Local.iUB,1,V.Local.iUB)
+			F.Intrinsic.Control.If(V.Local.iUB,=,0)
+				V.Local.sParts.Redim(0,0)
+			F.Intrinsic.Control.Else
+				V.Local.sParts.RedimPreserve(0,V.Local.iUB)
+			F.Intrinsic.Control.EndIf
+
+			V.Local.sParts(v.Local.iUB).Set(V.Local.sRow)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstBins.MoveNext
+	F.Intrinsic.Control.Loop
+
+	F.Intrinsic.Control.If(V.Local.sParts.UBound,>,-1)
+		F.Intrinsic.String.Join(V.Local.sParts,"!*!",V.Local.sParts)
+		F.Intrinsic.Control.If(V.Local.sPartString,=,"")
+			V.Local.sPartString.Set(V.Local.sParts)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.String.concat(V.Local.sPartString,"!*!",V.Local.sParts,V.Local.sPartString)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstBins.Close
+
+
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.Control.If(V.Local.sPartString,<>,"")
+	F.Intrinsic.Control.CallSub("SortByBin","sString",V.Local.sPartString)
+	V.Local.sPartString.Set(V.Args.sPartString)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.stop
+F.Intrinsic.UI.CloseWaitDialog
+F.Intrinsic.UI.BrowserFromString("Select a part",V.Local.sPartString,"*!*","!*!",V.Local.sCol,V.Local.sColW,10500,5000,V.local.sFormat,V.Local.sAlign,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+
+	V.Passed.000112.Set(V.Local.sRet(0))
+	V.Passed.000115.Set(V.Local.sRet(1))
+	V.Passed.000116.Set(V.Local.sRet(2))
+
+	F.Intrinsic.String.Concat(V.Local.sRet(0),"*!*",V.Local.sRet(1),"*!*",V.Local.sRet(3),"*!*",V.Local.sRet(4),"*!*",V.Passed.000110,V.Local.sPartBin)
+	F.Intrinsic.Control.CallSub("DL","sText",V.Local.sPartBin)
+	F.Intrinsic.String.Concat(V.Caller.TempDir,"\PartBin",V.Caller.Terminal,V.Local.sFile)
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sPartBin)
+	
+	'000110 - seq
+	'000113 - Rev
+
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.Part_Browser.End
+
+Program.Sub.GetWOPartInfo.Start
+V.Local.sQuery.declare(String)
+V.Local.sText.Declare(String)
+
+F.Intrinsic.UI.ChangeWaitStatus("Getting WO Part info")
+F.Intrinsic.String.Concat("SELECT PART, LOCATION FROM JOB_HEADER WHERE JOB='",V.uGlobal.uWO_Part!WO.Trim,"' AND SUFFIX='",V.uGlobal.uWO_Part!Suffix.Trim,"'",V.Local.sQuery)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstJob",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conx!rstJob.EOF,<>,True)
+	V.uGlobal.uWO_Part!Part.Set(V.ODBC.conx!rstJob.FieldValTrim!PART)
+	V.uGlobal.uWO_Part!Loc.Set(V.ODBC.conx!rstJob.FieldValTrim!LOCATION)
+
+	F.Intrinsic.String.Concat("SELECT WIDTH FROM INVENTORY_MST2 WHERE PART='",V.ODBC.conx!rstJob.FieldValTrim!PART,"' AND LOCATION='",V.ODBC.conx!rstJob.FieldValTrim!LOCATION,"'",V.Local.sQuery)
+	F.ODBC.Connection!conx.OpenRecordsetRO("rstPart",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstPart.EOF,<>,True)
+		V.uGlobal.uWO_Part!Diameter.Set(V.ODBC.conx!rstPart.FieldValTrim!WIDTH)
+		F.Intrinsic.String.Concat("Finished Good: ",V.uGlobal.uWO_Part!Part,"  ",V.uGlobal.uWO_Part!Loc,": Diameter - ",V.uGlobal.uWO_Part!Diameter,V.Local.sText)
+		F.Intrinsic.Control.CallSub(Dl,"sText",V.Local.sText)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstPart.Close
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstJob.Close
+
+Program.Sub.GetWOPartInfo.End
+
+Program.Sub.SortByBin.Start
+V.Local.sOldString.Declare(String)
+V.Local.sRow.Declare(String)
+V.Local.sNewString.Declare(String)
+V.Local.iUB.Declare(Long,-1)
+V.Local.iC.Declare(Long)
+V.Local.sNewString.Redim(-1,-1)
+V.Local.sHold.Declare(String)
+
+
+F.Intrinsic.String.Split(V.Args.sString,"!*!",V.Local.sOldString)
+F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sOldString.UBound,1)
+	F.Intrinsic.String.Split(V.Local.sOldString(v.Local.iC),"*!*",V.Local.sRow)
+	F.Intrinsic.String.Left(V.Local.sRow(3),3,V.Local.sHold)
+	F.Intrinsic.Control.If(V.Local.sHold,=,"SAW")
+		F.Intrinsic.Math.Add(V.Local.iUB,1,V.Local.iUB)
+		F.Intrinsic.Control.If(V.Local.iUB,=,0)
+			V.Local.sNewString.Redim(0,0)
+		F.Intrinsic.Control.Else
+			V.Local.sNewString.RedimPreserve(0,V.Local.iUB)
+		F.Intrinsic.Control.EndIf
+		V.Local.sNewString(v.Local.iUB).Set(V.Local.sOldString(v.Local.iC))
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sOldString.UBound,1)
+	F.Intrinsic.String.Split(V.Local.sOldString(v.Local.iC),"*!*",V.Local.sRow)
+	F.Intrinsic.String.Left(V.Local.sRow(3),3,V.Local.sHold)
+	F.Intrinsic.Control.If(V.Local.sHold,<>,"SAW")
+		F.Intrinsic.Math.Add(V.Local.iUB,1,V.Local.iUB)
+		F.Intrinsic.Control.If(V.Local.iUB,=,0)
+			V.Local.sNewString.Redim(0,0)
+		F.Intrinsic.Control.Else
+			V.Local.sNewString.RedimPreserve(0,V.Local.iUB)
+		F.Intrinsic.Control.EndIf
+		V.Local.sNewString(v.Local.iUB).Set(V.Local.sOldString(v.Local.iC))
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+F.Intrinsic.Debug.Stop
+F.Intrinsic.String.Join(V.Local.sNewString,"!*!",V.Local.sNewString)
+F.Intrinsic.Variable.AddRV("sPartString",V.Local.sNewString)
+
+Program.Sub.SortByBin.End
+
+program.sub.f_length_unload.start
+F.ODBC.connection!conx.Close
+F.Intrinsic.Control.End
+
+
+
+
+
+
+program.sub.f_length_unload.end
+
+program.sub.cmdok_click.start
+V.Local.fFeet.Declare(Float)
+V.Local.sFile.Declare(String)
+V.Local.sPartBin.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sParameters.Declare(String)
+V.Local.iC.Declare(String)
+
+F.Intrinsic.Control.If(V.Screen.F_Length!txtFeet.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Please enter feet")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Screen.F_Length!txtInches.Text,=,"")
+	F.Intrinsic.UI.Msgbox("Please enter inches")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+Gui.F_Length..Visible(False)
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.String.Concat(V.Caller.TempDir,"\PartBin",V.Caller.Terminal,V.Local.sFile)
+F.Intrinsic.File.File2String(V.Local.sFile,V.Local.sPartBin)
+F.Intrinsic.Control.CallSub("DL","sText",V.Local.sPartBin)
+
+F.Intrinsic.String.Split(V.Local.sPartBin,"*!*",V.Local.sPart)
+'V.uGlobal.uCutPart!part.Set(V.Local.sPart(0))
+'V.uGlobal.uCutPart!Loc.Set(V.Local.sPart(1))
+'V.uGlobal.uCutPart!Bin.Set(V.Local.sPart(2))
+'V.uGlobal.uCutPart!Length.Set(V.Local.sPart(3))
+'V.uGlobal.uCutPart!Seq.Set(V.Local.sPart(4))
+
+F.Intrinsic.Math.Div(V.Screen.F_Length!txtInches.Text,12,V.Local.fFeet)
+F.Intrinsic.Math.Add(V.Local.fFeet,V.Screen.F_Length!txtFeet.Text,V.Local.fFeet)
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+F.Intrinsic.Control.If(V.Local.fFeet,>,V.uGlobal.uCutPart!length)
+	F.Intrinsic.UI.Msgbox("Length of pipe exceeds length of pipe in inventory.")
+	Gui.F_Length..Show
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sPart(5),>,V.Local.fFeet)
+	F.Intrinsic.UI.Msgbox("Length of pipe cut exceeds length of pipe used.")
+	Gui.F_Length..Show
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Math.Sub(V.Local.fFeet,V.Local.sPart(5),V.uGlobal.uCutPart!Length)
+V.Local.fFeet.Set(V.Local.sPart(5))
+V.uGlobal.uCutPart!qtyIssued.Set(V.Local.fFeet)
+'F.Intrinsic.Math.Sub(V.uGlobal.uCutPart!Length,V.Local.fFeet,V.uGlobal.uCutPart!Length)
+'F.Intrinsic.Debug.CallWrapperDebugEnable
+V.Global.fFeet.Set(V.Local.fFeet)
+v.Global.sPartBinFile.Set(V.Local.sFile)
+F.Intrinsic.Control.CallSub("Save")
+'Moved the following to new Sub: Issue
+'F.Intrinsic.String.Concat(V.Ambient.Tab,V.uGlobal.uCutPart!Bin,V.Ambient.Tab,V.Ambient.Tab,V.Ambient.Tab,V.Local.fFeet,V.Local.sPartBin)
+'F.Intrinsic.Control.CallSub("DL","sText",V.Local.sPartBin)
+'F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sPartBin)
+'
+'F.Intrinsic.Debug.Stop
+'
+'F.Intrinsic.String.Concat(V.uGlobal.uCutPart!part,"!*!",V.uGlobal.uCutPart!Loc,"!*!",V.Local.fFeet,"!*!",V.uGlobal.uCutPart!Seq,"!*!","","!*!",V.Local.sFile,"!*!","1",V.Local.sParameters)
+'F.Global.General.CallWrapperSync(300060,V.Local.sParameters)
+'F.Intrinsic.Control.CallSub("DL","sText",V.Local.sParameters)
+'
+'F.ODBC.Connection!conx.Close
+'F.Intrinsic.Control.End
+
+program.sub.cmdok_click.end
+
+Program.Sub.Save.Start
+V.Local.sRet.Declare(String)
+V.Local.sParameters.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sBins.Declare(String)
+
+
+F.Intrinsic.UI.Msgbox("Will this pipe be used for more orders?","More Orders",4,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,=,6)
+	Gui.F_Saw..Show
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub("retNo")
+	F.Intrinsic.Control.CallSub("Issue")
+	F.Intrinsic.Control.CallSub("DL","sText","NO")
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.Save.End
+
+Program.Sub.retYes.Start
+V.Local.sQuery.Declare(String)
+
+F.Intrinsic.Control.If(V.uGlobal.uCutPart!Length,>,0)
+'	V.Local.sQuery.Set("SELECT * FROM BIN_MASTER WHERE BIN='SAW'")
+	F.Intrinsic.String.Concat("SELECT * FROM BIN_MASTER WHERE BIN='",V.Global.sSaw,"'",V.Local.sQuery)
+	F.ODBC.Connection!conx.OpenRecordsetRW("rstBin",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstBin.EOF,=,True)
+		F.ODBC.conx!rstBin.AddNew
+		F.ODBC.conx!rstBin.Set!BIN(V.Global.sSaw)
+		F.ODBC.conx!rstBin.Set!LOCATION("")
+		F.ODBC.conx!rstBin.Set!BIN_DESCRIPTION("")
+		F.ODBC.conx!rstBin.Update
+	F.intrinsic.Control.EndIf
+	F.ODBC.conx!rstBin.Close
+
+	F.Intrinsic.Control.CallSub("BINAddRecord","Part",V.uGlobal.uCutPart!Part,"Location",V.uGlobal.uCutPart!Loc,"Quantity",V.uGlobal.uCutPart!Length,"FromBin",V.uGlobal.uCutPart!Bin,"ToBin",V.Global.sSaw,"Lot","","Heat","","Serial","","GrossWeight","0","TareWeight","0")
+	F.Intrinsic.Control.CallSub("BINGenerate")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.retYes.End
+
+Program.Sub.retNo.Start
+V.Local.sNewPart.Declare(String)
+V.Local.sPartInfo.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.iLength.Declare(Long)
+V.Local.sBin.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sParameters.Declare(String)
+V.Local.sFileName.Declare(String)
+V.Local.fWidth.Declare(Float)
+V.Local.sCode.Declare(String)
+V.Local.sHold.Declare(String)
+V.Local.fCost.Declare(Float)
+
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+
+'F.Intrinsic.debug.InvokeDebugger
+F.Intrinsic.Debug.stop
+F.Intrinsic.String.Left(V.uGlobal.uCutPart!Part,1,V.Local.sHold)
+F.Intrinsic.Control.If(V.Local.sHold.UCase,<>,"B")
+	F.Global.Inventory.GetPartInfo(V.uGlobal.uCutPart!Part,,V.uGlobal.uCutPart!Loc,V.Local.sPartInfo)
+	F.Intrinsic.String.Split(V.Local.sPartInfo,"*!*",V.Local.sPartInfo)
+
+	F.Intrinsic.String.Concat("SELECT CODE_SOURCE, WIDTH FROM INVENTORY_MST2 WHERE PART='",V.uGlobal.uCutPart!Part,"' AND LOCATION='",V.uGlobal.uCutPart!Loc,"'",V.Local.sQuery)
+	F.ODBC.Connection!conx.OpenRecordsetRO("rstPart",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstPart.EOF,<>,True)
+		V.Local.sCode.Set(V.ODBC.conx!rstPart.FieldValTrim!CODE_SOURCE)
+		V.Local.fWidth.Set(V.ODBC.conx!rstPart.FieldValTrim!WIDTH)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstPart.Close
+
+	F.Intrinsic.String.Concat("B",V.uGlobal.uCutPart!Part,V.Local.sNewPart)
+	F.Intrinsic.String.Concat("SELECT * FROM INVENTORY_MSTR WHERE PART='",V.Local.snewpart,"' AND LOCATION='",V.uGlobal.uCutPart!Loc,"'",V.Local.sQuery)
+	F.ODBC.Connection!conx.OpenRecordsetRO("rstPart",V.Local.sQuery)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstPart.EOF,=,True)
+	'	F.Global.Inventory.CreatePart(V.Local.sNewPart,V.Local.sPartInfo(2),V.Local.sPartInfo(1),V.uGlobal.uCutPart!Loc,V.Local.sPartInfo(0),V.Local.sPartInfo(6),,,V.Local.sPartInfo(5))
+		F.Global.Inventory.AddPartToBatch(V.Local.sNewPart,V.Local.sPartInfo(2),V.Local.sPartInfo(1),V.uGlobal.uCutPart!Loc,V.Local.sPartInfo(0),V.Local.sPartInfo(6),,,V.Local.sPartInfo(5))
+		f.Global.Inventory.postpartbatch
+		F.ODBC.conx!rstPart.Close
+
+		F.ODBC.Connection!conx.OpenRecordsetRW("rstPart",V.Local.sQuery)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstPart.EOF,<>,True)
+			F.ODBC.conx!rstPart.Set!FLAG_LOT("Y")
+			F.ODBC.conx!rstPart.Set!AMT_COST(V.Local.sPartInfo(4))
+			F.ODBC.conx!rstPart.Update
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstPart.Close
+
+		F.Intrinsic.String.Concat("SELECT CODE_SOURCE, WIDTH FROM INVENTORY_MST2 WHERE PART='",V.Local.snewpart,"' AND LOCATION='",V.uGlobal.uCutPart!Loc,"'",V.Local.sQuery)
+		F.ODBC.Connection!conx.OpenRecordsetRW("rstPart",V.Local.sQuery)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstPart.EOF,<>,True)
+			F.ODBC.conx!rstPart.Set!CODE_SOURCE(V.Local.sCode)
+			F.ODBC.conx!rstPart.Set!WIDTH(V.Local.fWidth)
+			F.ODBC.conx!rstPart.Update
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.UI.Msgbox(V.local.sNewPart)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstPart.Close
+F.Intrinsic.Control.Else
+	V.Local.sNewPart.Set(V.uGlobal.uCutPart!Part)
+F.Intrinsic.Control.EndIf
+
+'F.Intrinsic.Math.IDiv(V.uGlobal.uCutPart!Length,1,V.Local.iLength)
+F.Intrinsic.Math.Fix(V.uGlobal.uCutPart!Length,V.Local.iLength)
+F.Intrinsic.Control.If(V.Local.iLength,<,2)
+	V.Local.sBin.Set("SCRAP")
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Concat("BY",V.Local.iLength,V.Local.sBin)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Concat("SELECT * FROM BIN_MASTER WHERE BIN='",V.Local.sBin,"'",V.Local.sQuery)
+F.ODBC.Connection!conx.OpenRecordsetRW("rstBin",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conx!rstBin.EOF,=,True)
+	F.ODBC.conx!rstBin.AddNew
+	F.ODBC.conx!rstBin.Set!BIN(V.Local.sBin)
+	F.ODBC.conx!rstBin.Set!LOCATION("")
+	F.ODBC.conx!rstBin.Set!BIN_DESCRIPTION("")
+	F.ODBC.conx!rstBin.Update
+F.intrinsic.Control.EndIf
+F.ODBC.conx!rstBin.Close
+
+F.Intrinsic.String.Concat(V.ambient.DblQuote,V.Caller.CompanyCode,"Issrec.txt",V.ambient.DblQuote,V.Local.sFileName)
+F.Intrinsic.String.Concat(V.Caller.FilesDir,"\",V.Local.sFileName,V.Local.sFile)
+
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+'F.Intrinsic.String.Concat(V.uGlobal.uCutPart!Part,V.Ambient.NewLine,"",V.Ambient.NewLine,V.uGlobal.uCutPart!Loc,V.Ambient.NewLine,V.uGlobal.uCutPart!Length,V.Ambient.NewLine,"",V.Ambient.NewLine,"",V.Local.sParameters)
+'F.Intrinsic.String.Concat(V.Local.sParameters,V.Ambient.NewLine,V.uGlobal.uCutPart!Bin,V.Ambient.NewLine,"",V.Ambient.NewLine,"",V.Ambient.NewLine,"I",V.Local.sParameters)
+F.Intrinsic.String.Concat(V.uGlobal.uCutPart!Part,","," ",",",V.uGlobal.uCutPart!Loc,",",V.uGlobal.uCutPart!Length,","," ",","," ",V.Local.sParameters)
+F.Intrinsic.String.Concat(V.Local.sParameters,",",V.uGlobal.uCutPart!Bin,","," ",","," ",",","I",V.Local.sParameters)
+F.Intrinsic.String.Concat(V.Local.sParameters,",","N",","," ",","," ",",",V.Local.sParameters)
+F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sParameters)
+'F.Intrinsic.UI.Msgbox(V.Local.sFileName)
+F.Intrinsic.Task.LaunchGSSSync("WIR104","-c",V.Local.sFileName)
+
+F.Intrinsic.Debug.Stop
+'F.Intrinsic.String.Concat(V.Local.sNewPart,V.Ambient.NewLine,"",V.Ambient.NewLine,V.uGlobal.uCutPart!Loc,V.Ambient.NewLine,V.uGlobal.uCutPart!Length,V.Ambient.NewLine,"",V.Ambient.NewLine,"",V.Local.sParameters)
+'F.Intrinsic.String.Concat(V.Local.sParameters,V.Ambient.NewLine,V.local.sBin,V.Ambient.NewLine,"",V.Ambient.NewLine,"",V.Ambient.NewLine,"R",V.Local.sParameters)
+F.Intrinsic.String.Concat(V.Local.sNewPart,","," ",",",V.uGlobal.uCutPart!Loc,",",V.uGlobal.uCutPart!Length,","," ",","," ",V.Local.sParameters)
+F.Intrinsic.String.Concat(V.Local.sParameters,",",V.local.sBin,","," ",","," ",",","R",V.Local.sParameters)
+F.Intrinsic.String.Concat(V.Local.sParameters,",","N",","," ",","," ",",",V.Local.sParameters)
+F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sParameters)
+F.Intrinsic.Task.LaunchGSSSync("WIR104","-C",V.Local.sFileName)
+
+F.Intrinsic.String.Concat(V.ambient.DblQuote,V.Caller.CompanyCode,"WORKORDR.txt",V.ambient.DblQuote,V.Local.sFileName)
+F.Intrinsic.String.Concat(V.Caller.FilesDir,"\",V.Local.sFileName,V.Local.sFile)
+'
+''F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+''F.Intrinsic.String.Concat(V.uGlobal.uCutPart!Part,V.Ambient.NewLine,"",V.Ambient.NewLine,V.uGlobal.uCutPart!Loc,V.Ambient.NewLine,V.uGlobal.uCutPart!Length,V.Ambient.NewLine,"",V.Ambient.NewLine,"",V.Local.sParameters)
+''F.Intrinsic.String.Concat(V.Local.sParameters,V.Ambient.NewLine,V.uGlobal.uCutPart!Bin,V.Ambient.NewLine,"",V.Ambient.NewLine,"",V.Ambient.NewLine,"I",V.Local.sParameters)
+'F.Intrinsic.String.Concat(V.uGlobal.uCutPart!Part,","," ",",",V.uGlobal.uCutPart!qtyIssued,",",V.uGlobal.uCutPart!Length,","," ",V.Local.sParameters)
+'F.Intrinsic.String.Concat(V.Local.sParameters,",",V.uGlobal.uCutPart!Bin,","," ",","," ",",",V.uGlobal.uCutPart!WO,",",V.uGlobal.uCutPart!Line,",",V.uGlobal.uCutPart!Seq,V.Local.sParameters)
+''F.Intrinsic.String.Concat(V.Local.sParameters,",","N",","," ",","," ",",",V.Local.sParameters)
+'F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sParameters)
+'F.Intrinsic.Task.LaunchGSSSync("WIR100","-c",V.Local.sFileName)
+
+F.Intrinsic.Debug.Stop
+
+Program.Sub.retNo.End
+
+Program.Sub.DeleteFiles.Start
+V.Local.sFile.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+F.Intrinsic.String.Concat(V.Caller.TempDir,"\PartBin",V.Caller.Terminal,V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.File.DeleteFile(V.Local.sFile)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Concat(V.Caller.TempDir,"\PartFlag",V.Caller.Terminal,V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.File.DeleteFile(V.Local.sFile)
+F.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.End
+
+
+Program.Sub.DeleteFiles.End
+
+Program.Sub.DL.Start
+V.Local.bExists.Declare(Boolean)
+f.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.If(V.Global.sFile,=,"")
+	F.Intrinsic.String.Concat(V.Caller.TempDir,"\CB_Drop_Handling_Log.txt",V.Global.sFile)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA(V.Args.sText)
+'F.Intrinsic.String.Concat(V.Global.sLog,V.Ambient.NewLine,V.Ambient.Date," - ",V.Args.sText,V.Global.sLog)
+'F.Intrinsic.File.String2file(V.Global.sFile,V.Global.sLog)
+F.Intrinsic.String.Concat(V.Ambient.Date," ",V.Ambient.Time," - ",V.Args.sText,V.Global.sLog)
+F.Intrinsic.File.Exists(V.Global.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.File.Append2FileNewLine(V.Global.sFile,V.Global.sLog)
+F.Intrinsic.Control.Else
+	F.Intrinsic.File.String2File(V.Global.sFile,V.Global.sLog)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.DL.End
+
+program.sub.txtfeet_gotfocus.start
+Gui.F_Length.txtFeet.SelectAll
+
+program.sub.txtfeet_gotfocus.end
+
+program.sub.txtinches_gotfocus.start
+gui.F_Length.txtInches.SelectAll
+
+program.sub.txtinches_gotfocus.end
+
+Program.Sub.Hook_Seq_Change.Start
+V.Local.sQuery.Declare(String)
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.String.Concat("SELECT UNITS FROM JOB_OPERATIONS WHERE JOB='",V.Passed.WORK-ORDER,"' AND SUFFIX='",V.Passed.SUFFIX,"' AND SEQ='000100'",V.Local.sQuery)
+F.ODBC.Connection!conx.OpenRecordsetRO("rstQty",V.Local.sQuery)
+F.Intrinsic.Control.If(V.ODBC.conx!rstQty.EOF,<>,True)
+	V.Passed.000120.Set(V.ODBC.conx!rstQty.FieldValTrim!UNITS)
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstQty.Close
+
+F.Intrinsic.Control.CallSub(Unload)
+
+Program.Sub.Hook_Seq_Change.End
+
+Program.Sub.CalcLengths.Start
+V.Local.sFile.Declare(String)
+V.Local.sPartBin.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.fMin.Declare(Float)
+V.Local.fMax.Declare(Float)
+V.Local.sHold.Declare(String)
+V.Local.iLen.Declare(Long)
+V.Local.iHold.Declare(Long)
+V.Local.fHold.Declare(Float)
+V.Local.iInches.Declare(Float)
+V.Local.iFeet.Declare(Float)
+V.Local.sLabel.Declare(String)
+V.Local.bShowLengths.Declare(Boolean)
+
+V.Local.bShowLengths.Set(True)
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.String.Concat(V.Caller.TempDir,"\PartBin",V.Caller.Terminal,V.Local.sFile)
+F.Intrinsic.File.File2String(V.Local.sFile,V.Local.sPartBin)
+F.Intrinsic.Control.CallSub("DL","sText",V.Local.sPartBin)
+
+F.Intrinsic.String.Split(V.Local.sPartBin,"*!*",V.Local.sPart)
+V.uGlobal.uCutPart!part.Set(V.Local.sPart(0))
+V.uGlobal.uCutPart!Loc.Set(V.Local.sPart(1))
+V.uGlobal.uCutPart!Bin.Set(V.Local.sPart(2))
+V.uGlobal.uCutPart!Length.Set(V.Local.sPart(3))
+V.uGlobal.uCutPart!Seq.Set(V.Local.sPart(4))
+
+V.Local.fMin.Set(V.Local.sPart(5))
+V.Local.fMax.Set(V.uGlobal.uCutPart!Length)
+
+F.Intrinsic.Debug.Stop
+F.Intrinsic.String.Left(V.uGlobal.uCutPart!Bin,2,V.Local.sHold)
+F.Intrinsic.Control.If(V.Local.sHold.UCase,=,"BY")
+	F.Intrinsic.String.Len(V.uGlobal.uCutPart!Bin,V.Local.iLen)
+	F.Intrinsic.Math.Sub(V.Local.iLen,2,V.Local.iLen)
+	F.Intrinsic.String.Right(V.uGlobal.uCutPart!Bin,V.Local.iLen,V.Local.sHold)
+	F.Intrinsic.Control.If(V.Local.sHold.IsNumeric,=,True)
+		V.Local.iHold.Set(V.Local.sHold)
+		F.Intrinsic.Control.If(V.Local.iHold,>,V.Local.fMin)
+			V.Local.fMin.Set(V.Local.iHold)
+		F.Intrinsic.Control.EndIf
+		F.Intrinsic.Math.Add(V.Local.iHold,1,V.Local.iHold)
+		F.Intrinsic.Control.If(V.Local.iHold,<,V.Local.fMax)
+			V.Local.fMax.Set(V.Local.iHold)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.fMin,>,V.Local.fMax)
+	V.Local.sLabel.Set("Unable to calculate suggested length of pipe bounds.  Please make sure you selected the appropriate bin and that the the Qty to Apply does not exceed Qty in bin")
+F.Intrinsic.Control.Else
+	V.Local.sLabel.Set("(Note: The length should be between ")
+	F.Intrinsic.Debug.Stop
+	F.Intrinsic.Math.Mult(V.Local.fMin,12,V.Local.fHold)
+	F.Intrinsic.Math.IDiv(V.Local.fHold,12,V.Local.iFeet)
+	F.Intrinsic.Math.Mult(V.Local.iFeet,12,V.Local.iHold)
+	F.Intrinsic.Math.Sub(V.Local.fHold,V.Local.iHold,V.Local.fHold)
+	'F.Intrinsic.math.Mod(V.Local.fHold,12,V.Local.fHold)
+	F.Intrinsic.Math.IDiv(V.Local.fHold,1,V.Local.iInches)
+	'F.Intrinsic.Math.Mod(V.Local.fHold,1,V.Local.fHold)
+	F.Intrinsic.Math.Sub(V.Local.fHold,V.Local.iInches,V.Local.fHold)
+	F.Intrinsic.Control.If(V.Local.fHold,>,0)
+		F.Intrinsic.Math.Add(V.Local.iInches,1,V.Local.iInches)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Math.Round(V.Local.iFeet,2,V.Local.iFeet)
+	F.Intrinsic.Math.Round(V.Local.iInches,2,V.Local.iInches)
+	F.Intrinsic.String.Concat(V.Local.sLabel,V.Local.iFeet," ft. ",V.Local.iInches," in. and ",V.Local.sLabel)
+	F.Intrinsic.Debug.Stop
+	F.Intrinsic.Math.Mult(V.Local.fMax,12,V.Local.fHold)
+	F.Intrinsic.Math.IDiv(V.Local.fHold,12,V.Local.iFeet)
+	F.Intrinsic.Math.Mult(V.Local.iFeet,12,V.Local.iHold)
+	F.Intrinsic.Math.Sub(V.Local.fHold,V.Local.iHold,V.Local.fHold)
+	'F.Intrinsic.math.Mod(V.Local.fHold,12,V.Local.fHold)
+	F.Intrinsic.Math.IDiv(V.Local.fHold,1,V.Local.iInches)
+	F.Intrinsic.Control.If(V.Local.iInches,>,V.Local.fHold)
+		F.Intrinsic.Math.Sub(V.Local.iInches,1,V.Local.iInches)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Math.Round(V.Local.iFeet,2,V.Local.iFeet)
+	F.Intrinsic.Math.Round(V.Local.iInches,2,V.Local.iInches)
+	F.Intrinsic.String.Concat(V.Local.sLabel,V.Local.iFeet," ft. ",V.Local.iInches," in.)",V.Local.sLabel)
+F.Intrinsic.Control.EndIf
+
+Gui.F_Length.lblLengths.Caption(V.Local.sLabel)
+
+F.Intrinsic.String.Left(V.uGlobal.uCutPart!Bin,3,V.Local.sHold)
+F.Intrinsic.Control.If(V.Local.sHold.UCase,=,"SAW")
+	F.Intrinsic.Math.Mult(V.uGlobal.uCutPart!Length,12,V.Local.fHold)
+	F.Intrinsic.Math.IDiv(V.Local.fHold,12,V.Local.iFeet)
+	F.Intrinsic.Math.Mult(V.Local.iFeet,12,V.Local.iHold)
+	F.Intrinsic.Math.Sub(V.Local.fHold,V.Local.iHold,V.Local.fHold)
+	F.Intrinsic.Math.Round(V.Local.iFeet,2,V.Local.iFeet)
+	F.Intrinsic.Math.Round(V.Local.iHold,2,V.Local.iHold)
+	Gui.F_Length.txtFeet.Text(V.Local.iFeet)
+	Gui.F_Length.txtInches.Text(V.Local.fHold)
+	F.Intrinsic.Control.If(V.Screen.F_Length!txtFeet.Text,<>,"")
+		V.Local.bShowLengths.Set(False)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.If(V.Screen.F_Length!txtInches.Text,<>,"")
+			V.Local.bShowLengths.Set(False)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Variable.AddRV("bShow",V.Local.bShowLengths)
+
+Program.Sub.CalcLengths.End
+
+program.sub.f_saw_unload.start
+
+program.sub.f_saw_unload.end
+
+Program.Sub.Issue.Start
+V.Local.sPartBin.Declare(String)
+V.Local.sParameters.Declare(String)
+
+F.Intrinsic.String.Concat(V.Ambient.Tab,V.uGlobal.uCutPart!Bin,V.Ambient.Tab,V.Ambient.Tab,V.Ambient.Tab,V.Global.fFeet,V.Local.sPartBin)
+F.Intrinsic.Control.CallSub("DL","sText",V.Local.sPartBin)
+F.Intrinsic.File.String2File(V.global.sPartBinFile,V.Local.sPartBin)
+
+F.Intrinsic.Debug.Stop
+
+F.Intrinsic.String.Concat(V.uGlobal.uCutPart!part,"!*!",V.uGlobal.uCutPart!Loc,"!*!",V.global.fFeet,"!*!",V.uGlobal.uCutPart!Seq,"!*!","","!*!",V.global.sPartBinFile,"!*!","1",V.Local.sParameters)
+F.Global.General.CallWrapperSync(300060,V.Local.sParameters)
+F.Intrinsic.Control.CallSub("DL","sText",V.Local.sParameters)
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+Program.Sub.Issue.End
+
+program.sub.cmdsawok_click.start
+'This sub is no longer in use as of 11/5/10
+'F.Intrinsic.Control.If(V.Screen.F_Saw!drpSAW.Text,=,"")
+'	F.Intrinsic.UI.Msgbox("Select SAW bin")
+'	F.Intrinsic.Control.ExitSub
+'F.Intrinsic.Control.EndIf
+'
+'F.Intrinsic.Control.CallSub("retYes")
+'F.Intrinsic.Control.CallSub("DL","sText","YES")
+'F.Intrinsic.Control.CallSub("Issue")
+
+program.sub.cmdsawok_click.end
+
+Program.Sub.Unload.Start
+F.ODBC.Connection!conx.Close
+f.Intrinsic.Control.End
+
+Program.Sub.Unload.End
+
+Program.Sub.Hook_Select_Part.Start
+F.Intrinsic.UI.InvokeWaitDialog("Loading ...","Loading")
+F.Intrinsic.Control.CallSub("DL","sText","Hook 28877 or 28878: Part browser")
+V.uGlobal.uWO_Part!WO.Set(V.Passed.WORK-ORDER)
+V.uGlobal.uWO_Part!Suffix.Set(V.Passed.SUFFIX)
+V.Passed.777777.Set(1)
+F.Intrinsic.Debug.Stop
+F.Intrinsic.Control.CallSub("GetWOPartInfo")
+F.Intrinsic.Control.CallSub("Part_Browser")
+F.Intrinsic.Control.CallSub(Unload)
+
+Program.Sub.Hook_Select_Part.End
+
+Program.Sub.Hook_Pre_Entry.Start
+F.Intrinsic.Control.If(V.Passed.SEQUENCE,=,"000100")
+	V.Passed.noncommitted.Set(1)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.End
+
+Program.Sub.Hook_Pre_Entry.End
+
+Program.Sub.Hook_Populate.Start
+F.Intrinsic.Control.CallSub("DeleteFiles")
+V.Passed.000110.Set("000100")
+F.Intrinsic.Control.End
+
+Program.Sub.Hook_Populate.End
+
+Program.Sub.Hook_Pre_Save_Seq.Start
+V.Local.sFile.Declare(String)
+V.local.sPartBin.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+F.Intrinsic.Control.CallSub("DL","sText","Hook 28879: Pre-Save hook")
+F.Intrinsic.Debug.stop
+F.Intrinsic.String.Concat(V.Caller.TempDir,"\PartFlag",V.Caller.Terminal,V.Local.sFile)
+F.Intrinsic.File.String2File(V.Local.sFile,"Created")
+F.Intrinsic.String.Concat(V.Caller.TempDir,"\PartBin",V.Caller.Terminal,V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.File.File2String(V.Local.sFile,V.Local.sPartBin)
+	F.Intrinsic.String.Concat(V.Local.sPartBin,"*!*",V.Passed.000120,V.Local.sPartBin)
+	F.Intrinsic.File.String2File(V.Local.sFile,V.Local.sPartBin)
+	F.Intrinsic.Debug.Stop
+	
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Hook_Pre_Save_Seq.End
+
+Program.Sub.Hook_Pre_Okay.Start
+V.Local.sFile.Declare(String)
+V.local.sPartBin.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.x.Declare(Long)
+V.Local.y.Declare(Long)
+F.Intrinsic.Control.CallSub("DL","sText","Hook 28882: pre-OK")
+F.Intrinsic.String.Concat(V.Caller.TempDir,"\PartFlag",V.Caller.Terminal,V.Local.sFile)
+F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Intrinsic.String.Concat(V.Caller.TempDir,"\PartBin",V.Caller.Terminal,V.Local.sFile)
+	F.Intrinsic.File.Exists(V.Local.sFile,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Intrinsic.Debug.Stop
+		V.uGlobal.uCutPart!WO.Set(V.Passed.WORK-ORDER)
+		V.uGlobal.uCutPart!Line.Set(V.Passed.SUFFIX)
+		F.Intrinsic.Control.CallSub("CalcLengths")
+
+		F.Intrinsic.Control.If(V.Args.bShow,<>,False)
+			
+			Gui.F_Length..Show
+			Gui.F_Length..AlwaysOnTop(True)
+'			F.Intrinsic.UI.Keyboard(64,1,V.Screen.F_Length!txtFeet.HWnd)
+'			F.Intrinsic.Math.Add(V.Screen.F_Length.Left,V.Screen.F_Length.Width,V.Local.x)
+'			F.Intrinsic.API.SetWindowPosition(V.Screen.F_Length.HWnd,V.Ambient.KeyboardHandle,2)
+
+			Gui.F_Length.txtFeet.SetFocus
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.CallSub(Cmdok_click)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.ODBC.Connection!conx.Close
+		F.Intrinsic.Control.End
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.ODBC.Connection!conx.Close
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Hook_Pre_Okay.End
+
+program.sub.cmdsaw1_click.start
+'F.Intrinsic.Debug.InvokeDebugger
+F.Intrinsic.Debug.Stop
+V.Global.sSaw.Set("SAW1")
+F.Intrinsic.Control.CallSub("retYes")
+F.Intrinsic.Control.CallSub("DL","sText","YES")
+F.Intrinsic.Control.CallSub("Issue")
+
+
+program.sub.cmdsaw1_click.end
+
+program.sub.cmdsaw2_click.start
+V.Global.sSaw.Set("SAW2")
+F.Intrinsic.Control.CallSub("retYes")
+F.Intrinsic.Control.CallSub("DL","sText","YES")
+F.Intrinsic.Control.CallSub("Issue")
+
+
+
+program.sub.cmdsaw2_click.end
+
+program.sub.cmdsaw3_click.start
+V.Global.sSaw.Set("SAW3")
+F.Intrinsic.Control.CallSub("retYes")
+F.Intrinsic.Control.CallSub("DL","sText","YES")
+F.Intrinsic.Control.CallSub("Issue")
+
+
+
+program.sub.cmdsaw3_click.end
+
+program.sub.cmdftkey_click.start
+Gui.F_Length.txtFeet.Text("")
+F.Intrinsic.UI.Keyboard(64,1,V.Screen.F_Length!txtFeet.HWnd)
+F.Intrinsic.API.SetWindowPositions(V.Screen.F_Length.HWnd,V.Ambient.KeyboardHandle,0)
+
+program.sub.cmdftkey_click.end
+
+program.sub.cmdinkey_click.start
+Gui.F_Length.txtInches.Text("")
+F.Intrinsic.UI.Keyboard(64,1,V.Screen.F_Length!txtInches.HWnd)
+F.Intrinsic.API.SetWindowPositions(V.Screen.F_Length.HWnd,V.Ambient.KeyboardHandle,0)
+
+
+program.sub.cmdinkey_click.end
+
+
